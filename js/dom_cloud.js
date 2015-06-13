@@ -34,9 +34,10 @@ recursiveDOM.convert = function(){ // converts to array;
 
   sortedArray.sort(function(a,b){return b[1] - a[1]});
   sortedArray.splice(20,sortedArray.length - 20);
-
-  for(var i =0; i<sortedArray.length; i++){
+  console.log(sortedArray);
+  for(var i= 0; i<sortedArray.length; i++){
   var divvy  = document.createElement('div');
+  divvy.style.fontSize = (100 - i *3)/3;
   divvy.innerHTML = sortedArray[i];
   display.appendChild(divvy);
   }
