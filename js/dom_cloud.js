@@ -32,6 +32,7 @@ recursiveDOM.convert = function(){
   }
   //Sorts the array from highest count to lowest count
   sortedArray.sort(function(a,b){return b[1] - a[1]});
+  //Removes all elements in the array that are not in the top 20.
   sortedArray.splice(20,sortedArray.length - 20);
   for(var i= 0; i<sortedArray.length; i++){
   //Appending to display and sets the font size based on the count of each key.
@@ -41,4 +42,4 @@ recursiveDOM.convert = function(){
   display.appendChild(divvy);
   }
 }
-
+ 
